@@ -1,4 +1,8 @@
-class ChangeHandler {
+// for testing, comment this in
+// class ChangeHandler {
+
+// for testing, comment this out
+export class ChangeHandler {
 
     constructor(amountDue) {
         this.amountDue = amountDue;
@@ -7,27 +11,21 @@ class ChangeHandler {
 
     insertCoin(coinType) {
         switch (coinType) {
-            case 'q':
+            case 'quarter':
                 this.cashTendered += 25;
-                console.log('added 25 cents');
                 break;
-            case 'd':
+            case 'dime':
                 this.cashTendered += 10;
-                console.log('added 10 cents');
                 break;
-            case 'n':
+            case 'nickel':
                 this.cashTendered += 5;
-                console.log('added 5 cents');
                 break;
-            case 'p':
+            case 'penny':
                 this.cashTendered += 1;
-                console.log('added 1 cent');
                 break;
             default:
-                console.log('must enter quarter (q), nickel (n), dime (d), or penny (p)');
                 break;
         }
-        console.log(`total: ${this.cashTendered} cents inserted`);
     }
 
     isPaymentSufficient() {
@@ -63,6 +61,5 @@ class ChangeHandler {
     }
 }
 
-module.exports = {
-    ChangeHandler
-}
+// for testing, comment this in
+// module.exports = { ChangeHandler };

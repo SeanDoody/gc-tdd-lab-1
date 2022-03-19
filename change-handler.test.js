@@ -11,34 +11,34 @@ describe('ChangeHandler tests', () => {
 
     test('inserting a quarter adds 25 to cashTendered', () => {
         const changeHandler = new ChangeHandler(100);
-        changeHandler.insertCoin('q');
+        changeHandler.insertCoin('quarter');
         expect(changeHandler.cashTendered).toEqual(25);
     });
 
     test('inserting a dime adds 10 to cashTendered', () => {
         const changeHandler = new ChangeHandler(100);
-        changeHandler.insertCoin('d');
+        changeHandler.insertCoin('dime');
         expect(changeHandler.cashTendered).toEqual(10);
     });
 
     test('inserting a nickel adds 5 to cashTendered', () => {
         const changeHandler = new ChangeHandler(100);
-        changeHandler.insertCoin('n');
+        changeHandler.insertCoin('nickel');
         expect(changeHandler.cashTendered).toEqual(5);
     });
 
     test('inserting a penny adds 1 to cashTendered', () => {
         const changeHandler = new ChangeHandler(100);
-        changeHandler.insertCoin('p');
+        changeHandler.insertCoin('penny');
         expect(changeHandler.cashTendered).toEqual(1);
     });
 
     test('inserting a quarter, dime, nickel, and penny adds 41 to cashTendered', () => {
         const changeHandler = new ChangeHandler(100);
-        changeHandler.insertCoin('q');
-        changeHandler.insertCoin('d');
-        changeHandler.insertCoin('n');
-        changeHandler.insertCoin('p');
+        changeHandler.insertCoin('quarter');
+        changeHandler.insertCoin('dime');
+        changeHandler.insertCoin('nickel');
+        changeHandler.insertCoin('penny');
         expect(changeHandler.cashTendered).toEqual(41);
     });
 
